@@ -31,6 +31,8 @@ export default function Experience() {
                   border: "1px solid rgba(0, 0, 0, 0.1)",
                   textAlign: "left",
                   padding: "1.3rem 2rem",
+                  background: "#d3d3d3",
+                  color: "#d4d4d4",
                 }}
                 date={item.date}
                 icon={item.icon}
@@ -55,7 +57,7 @@ export default function Experience() {
                 <p className="font-normal !mt-0 text-neutral-800">
                   {item.location}
                 </p>
-                <p className="!mt-1 !font-normal text-neutral-800">
+                <p className="!mt-1 !font-normal text-neutral-800 whitespace-pre-line">
                   {item.description}
                 </p>
               </VerticalTimelineElement>
