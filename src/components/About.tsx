@@ -8,7 +8,7 @@ import Tile from "./Tile";
 
 const About: React.FC = () => {
   const codeSnippet =
-    '#include <iostream>\nint main() {\n  std::cout << "Profile_Picture" << std::endl;\n  return 0;\n}';
+  '#include <iostream>\n#include <opencv2/opencv.hpp>\n\nint main() {\n\n    cv::Mat image = cv::imread("Display_Picture.jpg");\n\n    cv::imshow("Display Image", image);\n\n    cv::waitKey(0);\n\n    return 0;\n\n}';
   const [displayedText, setDisplayedText] = useState<string>("");
   const [currentIndex, setCurrentIndex] = useState<number>(0);
   const [shouldShowText, setShouldShowText] = useState<boolean>(true);
@@ -93,14 +93,14 @@ const About: React.FC = () => {
               initial={{ opacity: 0 }}
               animate={{ opacity: fade === "out" ? 0 : 1 }} // Control fade-in and fade-out
               transition={{
-                duration: fade === "out" ? 1 : 1.5,
+                duration: fade === "in" ? 1 : 1.5,
                 ease: "easeInOut",
               }}
             >
               <motion.img
                 src={AboutImage}
                 alt="A professional portrait of the developer"
-                className="w-48 md:w-60 object-cover rounded-md shadow-lg"
+                className="w-80 md:w-96 object-cover rounded-md shadow-lg"
                 initial={{ opacity: 0 }}
                 animate={{ opacity: fade === "out" ? 0 : 1 }} // Control fade-in and fade-out
                 transition={{
