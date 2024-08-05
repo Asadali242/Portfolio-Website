@@ -8,7 +8,7 @@ import Tile from "./Tile";
 
 const About: React.FC = () => {
   const codeSnippet =
-  '#include <iostream>\n#include <opencv2/opencv.hpp>\n\nint main() {\n\n    cv::Mat image = cv::imread("Display_Picture.jpg");\n\n    cv::imshow("Display Image", image);\n\n    cv::waitKey(0);\n\n    return 0;\n\n}';
+  '#include <iostream>\n#include <opencv2/opencv.hpp>\n\nint main() {\n\n    cv::Mat image = cv::imread("Display_Picture.jpg");\n\n    cv::imshow("Display_Picture.jpg", image);\n\n    cv::waitKey(0);\n\n    return 0;\n\n}';
   const [displayedText, setDisplayedText] = useState<string>("");
   const [currentIndex, setCurrentIndex] = useState<number>(0);
   const [shouldShowText, setShouldShowText] = useState<boolean>(true);
