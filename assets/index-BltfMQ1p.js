@@ -63,7 +63,7 @@ int main() {
 
     cv::Mat image = cv::imread("Display_Picture.jpg");
 
-    cv::imshow("Display Image", image);
+    cv::imshow("Display_Picture.jpg", image);
 
     cv::waitKey(0);
 
