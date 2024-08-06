@@ -2,6 +2,7 @@ import { motion } from "framer-motion";
 import { links } from "../lib/data";
 import { BsArrowRight } from "react-icons/bs";
 import Button from "./Button";
+import DarkModeToggle from './DarkModeToggle';
 
 export default function Header() {
   return (
@@ -26,13 +27,14 @@ export default function Header() {
                 url={link.hash}
                 className="flex w-full items-center justify-center px-3 py-3 bg-neutral-800 text-white rounded-lg shadow-md hover:bg-neutral-700 transition duration-300 ease-in-out gap-4"
                 icon={
-                  <BsArrowRight className="ml-2 h-5 w-5 text-neutral-400 group-hover:text-neutral-300 " />
+                  <BsArrowRight className="ml-2 h-5 w-5 text-neutral-50 dark:text-neutral-900 group-hover:text-neutral-300 " />
                 }
               />
             </motion.li>
           ))}
         </ul>
       </nav>
+      <DarkModeToggle /> {/* Add the DarkModeToggle component */}
     </header>
   );
 }

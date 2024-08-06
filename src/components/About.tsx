@@ -68,7 +68,7 @@ const About: React.FC = () => {
             }, 3000); // Time the image is displayed before fading out
           }, 1000); // Delay before showing the image
         }
-      }, 50);
+      }, 1);
 
       return () => clearInterval(typingInterval);
     }
@@ -112,7 +112,7 @@ const About: React.FC = () => {
           )}
           {shouldShowText && (
             <div className="flex justify-center items-center mb-6">
-              <p className="whitespace-pre-line text-lime-600 md:text-2xl ">
+              <p className="whitespace-pre-line text-lime-600 dark:text-neutral-900 md:text-2xl ">
                 {displayedText}
               </p>
             </div>
@@ -123,8 +123,8 @@ const About: React.FC = () => {
             animate={{ opacity: 1, x: 0 }}
             transition={{ duration: 0.6, type: "spring", stiffness: 120 }}
           >
-            <h2 className="text-3xl font-bold mb-4">About Me</h2>
-            <p className="text-lg leading-relaxed pb-8">
+            <h2 className="text-3xl font-bold dark:text-neutral-900 mb-4">About Me</h2>
+            <p className="text-lg leading-relaxed pb-8 dark:text-neutral-900">
               I am a Computer Science graduate with a deep passion for
               harnessing the power of AI and machine learning to tackle global
               challenges. Driven by a relentless quest for excellence, I am

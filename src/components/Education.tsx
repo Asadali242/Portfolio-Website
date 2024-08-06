@@ -21,7 +21,7 @@ const Education: React.FC = () => {
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.6, type: "spring", stiffness: 120 }}
         >
-          <h2 className="text-3xl font-bold mb-4">Education</h2>
+          <h2 className="text-3xl font-bold mb-4  dark:text-neutral-900">Education</h2>
           <div className="bg-slate-100 text-slate-900 shadow-md rounded-lg p-6 mx-auto max-w-full sm:max-w-md md:max-w-lg lg:max-w-2xl">
             <div className="flex flex-col sm:flex-row items-center justify-center mb-4">
               <div className="text-center sm:text-left flex flex-col items-center sm:items-start">

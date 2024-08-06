@@ -68,7 +68,7 @@ export default function Projects() {
       </div>
 
       <div className="relative z-10">
-        <h2 className="text-3xl font-bold my-6 text-center">My Projects</h2>
+        <h2 className="text-3xl font-bold my-6 dark:text-neutral-900 text-center">My Projects</h2>
         <div className="flex flex-col items-center gap-8">
           {projectsData.map((project, index) => (
             <Project key={index} {...project} />

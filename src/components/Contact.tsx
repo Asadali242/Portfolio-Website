@@ -74,7 +74,7 @@ const Contact: React.FC = () => {
         ))}
       </div>
       <div className="relative z-10 container mx-auto px-4 md:px-8 lg:px-16">
-        <h2 className="text-3xl font-bold my-6 text-center">Contact Me</h2>
+        <h2 className="text-3xl font-bold my-6 dark:text-neutral-900 text-center">Contact Me</h2>
         <div className="flex flex-col md:flex-row gap-8">
           <motion.div className="w-full md:w-2/3" style={{ opacity, scale }}>
             <form
@@ -133,7 +133,7 @@ const Contact: React.FC = () => {
                 className="mt-4 py-2 text-sm"
               />
               {messageSent && (
-                <p className="mt-4 text-green-500">
+                <p className="mt-4 text-lime-500 dark:text-neutral-900">
                   Message sent successfully!
                 </p>
               )}
@@ -145,7 +145,7 @@ const Contact: React.FC = () => {
             style={{ opacity: contactOpacity, y: contactY }}
           >
             <div className="mb-8">
-              <h3 className="text-2xl font-semibold mb-4">
+              <h3 className="text-2xl dark:text-neutral-900 font-semibold mb-4">
                 Schedule a Meeting
               </h3>
               <Button
@@ -156,14 +156,14 @@ const Contact: React.FC = () => {
               />
             </div>
             <div className="mb-8">
-              <h3 className="text-2xl font-semibold mb-4">
+              <h3 className="text-2xl dark:text-neutral-900 font-semibold mb-4">
                 Contact Information
               </h3>
-              <p className="mb-4">
+              <p className="mb-4 dark:text-neutral-900">
                 Email:{" "}
                 <a
                   href="mailto:aa4357@drexel.edu"
-                  className="text-lime-500 hover:underline"
+                  className="text-lime-500 dark:text-neutral-900 hover:underline"
                 >
                   aa4357@drexel.edu
                 </a>
@@ -181,7 +181,7 @@ const Contact: React.FC = () => {
                   href="https://github.com/Asadali242"
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="text-neutral-50 hover:text-neutral-300"
+                  className="text-neutral-50 hover:text-neutral-300 dark:text-neutral-900"
                 >
                   <FaGithub className="text-2xl" />
                 </a>

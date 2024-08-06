@@ -5,12 +5,28 @@ import {
 import "react-vertical-timeline-component/style.min.css";
 import { experiencesData } from "../lib/data";
 import Tile from "./Tile";
+import { useEffect, useState } from "react";
 
 export default function Experience() {
+  const [isDarkMode, setIsDarkMode] = useState(() => {
+    const savedMode = localStorage.getItem('dark-mode');
+    return savedMode === 'true' || (!savedMode && window.matchMedia('(prefers-color-scheme: dark)').matches);
+  });
+
+  useEffect(() => {
+    const observer = new MutationObserver(() => {
+      setIsDarkMode(document.documentElement.classList.contains('dark'));
+    });
+
+    observer.observe(document.documentElement, { attributes: true, attributeFilter: ['class'] });
+
+    return () => observer.disconnect();
+  }, []);
+
   return (
     <section
       id="experience"
-      className="relative scroll-mt-28  min-h-screen pt-8"
+      className="relative scroll-mt-28 min-h-screen pt-8 bg-black dark:bg-lime-400"
     >
       <div className="absolute inset-0 w-full min-h-screen grid grid-cols-11 lg:grid-cols-20 overflow-hidden z-0">
         {Array.from({ length: 20 * 30 }).map((_, index) => (
@@ -18,7 +34,7 @@ export default function Experience() {
         ))}
       </div>
       <div className="relative z-10">
-        <h2 className="text-3xl font-bold my-6 text-center text-neutral-50">
+        <h2 className="text-4xl font-bold my-6 text-center text-neutral-50 dark:text-neutral-900">
           My Experience
         </h2>
         <div className="container mx-auto px-4 md:px-8 lg:px-16">
@@ -35,6 +51,7 @@ export default function Experience() {
                   color: "#d4d4d4",
                 }}
                 date={item.date}
+                dateClassName={isDarkMode ? 'text-neutral-900' : 'text-neutral-50'}
                 icon={item.icon}
                 iconStyle={{
                   fontSize: "1.5rem",

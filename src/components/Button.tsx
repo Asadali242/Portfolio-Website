@@ -91,7 +91,7 @@ const Button: React.FC<EncryptButtonProps> = ({
       onMouseEnter={scramble}
       onMouseLeave={stopScramble}
       onClick={handleClick}
-      className={`relative overflow-hidden rounded-lg border-[1px] border-neutral-500 bg-neutral-800 px-4 py-2 text-sm font-mono font-medium uppercase text-neutral-300 transition-colors hover:text-lime-300 ${className}`}
+      className={`relative overflow-hidden rounded-lg border-[1px] border-neutral-500 bg-neutral-800 text-neutral-300 hover:text-lime-400 dark:bg-neutral-300 dark:text-neutral-900 dark:hover:text-red-600 px-4 py-2 text-sm font-mono font-medium uppercase transition-colors ${className}`}
       disabled={loading}
     >
       <div className="relative z-10 flex items-center justify-center gap-2">

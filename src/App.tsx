@@ -26,7 +26,7 @@ function App() {
         <Footer />
       </div>
 
-      <div className="fixed bottom-6 right-6 flex flex-col space-y-6 z-50">
+      <div className="fixed bottom-6 right-6 flex flex-col space-y-6 z-50 social-icons">
         <a
           href="https://www.linkedin.com/in/asad-mehboob-ali/"
           target="_blank"
@@ -40,7 +40,7 @@ function App() {
           href="https://github.com/Asadali242"
           target="_blank"
           rel="noopener noreferrer"
-          className="text-neutral-50 hover:text-neutral-200"
+          className="text-neutral-50 hover:text-neutral-200 dark:text-neutral-900"
         >
           <FaGithub className="text-3xl" />
         </a>

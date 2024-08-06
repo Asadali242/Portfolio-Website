@@ -4,8 +4,25 @@ import { BsArrowRight } from "react-icons/bs";
 import { Animation } from "./Animation";
 import EncryptButton from "./Button";
 import Tile from "./Tile";
+import { useEffect, useState } from "react";
 
 const Hero = () => {
+  const [isDarkMode, setIsDarkMode] = useState(() => {
+    const savedMode = localStorage.getItem('dark-mode');
+    return savedMode === 'true' || (!savedMode && window.matchMedia('(prefers-color-scheme: dark)').matches);
+  });
+
+  // Update the dark mode state when the class on the HTML element changes
+  useEffect(() => {
+    const observer = new MutationObserver(() => {
+      setIsDarkMode(document.documentElement.classList.contains('dark'));
+    });
+
+    observer.observe(document.documentElement, { attributes: true, attributeFilter: ['class'] });
+
+    return () => observer.disconnect();
+  }, []);
+
   return (
     <div
       id="home"
@@ -22,26 +39,28 @@ const Hero = () => {
           <motion.h1
             initial={{ opacity: 0, y: 100 }}
             animate={{ opacity: 1, y: 0 }}
-            className="text-4xl lg:text-5xl font-bold uppercase font-display tracking-[-0.02em] drop-shadow-sm md:text-7xl md:leading-[5rem] p-2 rounded"
+            className="text-4xl lg:text-5xl font-bold uppercase font-display tracking-[-0.02em] drop-shadow-sm md:text-7xl md:leading-[5rem] p-2 rounded dark:text-neutral-900"
           >
             Hi, I'm Asad Mehboob Ali.
           </motion.h1>
-          <TypeAnimation
-            sequence={[
-              "I'm a CS graduate from Drexel.",
-              1000,
-              "Nice to meet you!",
-              1000,
-              "Actively seeking full-time employment!",
-              1000,
-              "Check out my LinkedIn using the link below.",
-              1000,
-            ]}
-            wrapper="span"
-            speed={50}
-            style={{ fontSize: "2em", display: "inline-block" }}
-            repeat={Infinity}
-          />
+          <div className={`text-2xl ${isDarkMode ? 'text-black' : 'text-lime-400'}`}>
+            <TypeAnimation
+              sequence={[
+                "I'm a CS graduate from Drexel.",
+                1000,
+                "Nice to meet you!",
+                1000,
+                "Actively seeking full-time employment!",
+                1000,
+                "Check out my LinkedIn using the link below.",
+                1000,
+              ]}
+              wrapper="span"
+              speed={50}
+              style={{ display: "inline-block" }}
+              repeat={Infinity}
+            />
+          </div>
 
           <div className="flex justify-center md:justify-start items-center gap-5">
             <EncryptButton
