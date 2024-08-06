@@ -68,7 +68,7 @@ const About: React.FC = () => {
             }, 3000); // Time the image is displayed before fading out
           }, 1000); // Delay before showing the image
         }
-      }, 1);
+      }, 50);
 
       return () => clearInterval(typingInterval);
     }
