@@ -13,7 +13,7 @@ function App() {
   return (
     <div className="relative font-ibm bg-neutral-900 text-neutral-50 m-0 p-0 ">
       <div className="relative z-10">
-        <Header />
+      <Header />
         <main>
           <Hero />
           <About />
@@ -26,7 +26,7 @@ function App() {
         <Footer />
       </div>
 
-      <div className="fixed bottom-6 right-6 flex flex-col space-y-6 z-50 social-icons">
+      <div className="fixed bottom-6 left-6 flex flex-col space-y-6 z-50 social-icons">
         <a
           href="https://www.linkedin.com/in/asad-mehboob-ali/"
           target="_blank"

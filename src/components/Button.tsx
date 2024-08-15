@@ -20,6 +20,7 @@ const Button: React.FC<EncryptButtonProps> = ({
 }) => {
   const intervalRef = useRef<ReturnType<typeof setInterval> | null>(null);
   const [displayText, setDisplayText] = useState(text);
+  const [isDarkMode, setIsDarkMode] = useState(false);
 
   const CYCLES_PER_LETTER = 2;
   const SHUFFLE_TIME = 50;
@@ -77,10 +78,22 @@ const Button: React.FC<EncryptButtonProps> = ({
   };
 
   useEffect(() => {
+    const updateMode = () => {
+      setIsDarkMode(document.documentElement.classList.contains("dark"));
+    };
+
+    // Set initial mode
+    updateMode();
+
+    // Listen for changes to the dark mode class on the document
+    const observer = new MutationObserver(updateMode);
+    observer.observe(document.documentElement, { attributes: true, attributeFilter: ["class"] });
+
     return () => {
       if (intervalRef.current) {
         clearInterval(intervalRef.current);
       }
+      observer.disconnect();
     };
   }, []);
 
@@ -107,7 +120,11 @@ const Button: React.FC<EncryptButtonProps> = ({
           duration: 1,
           ease: "linear",
         }}
-        className="duration-300 absolute inset-0 z-0 scale-125 bg-gradient-to-t from-lime-400/0 from-40% via-lime-400/100 to-lime-400/0 to-60% opacity-0 transition-opacity group-hover:opacity-100"
+        className={`duration-300 absolute inset-0 z-0 scale-125 ${
+          isDarkMode
+            ? "bg-gradient-to-t from-neutral-700/0 from-40% via-neutral-700/100 to-neutral-700/0 to-60%"
+            : "bg-gradient-to-t from-lime-400/0 from-40% via-lime-400/100 to-lime-400/0 to-60%"
+        } opacity-0 transition-opacity group-hover:opacity-100`}
       />
     </motion.button>
   );

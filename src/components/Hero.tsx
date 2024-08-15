@@ -1,8 +1,6 @@
 import { motion } from "framer-motion";
 import { TypeAnimation } from "react-type-animation";
-import { BsArrowRight } from "react-icons/bs";
 import { Animation } from "./Animation";
-import EncryptButton from "./Button";
 import Tile from "./Tile";
 import { useEffect, useState } from "react";
 
@@ -63,16 +61,9 @@ const Hero = () => {
           </div>
 
           <div className="flex justify-center md:justify-start items-center gap-5">
-            <EncryptButton
-              text="Contact"
-              url="#contact"
-              icon={<BsArrowRight />}
-            />
-            <EncryptButton
-              text="Projects"
-              url="#projects"
-              icon={<BsArrowRight />}
-            />
+            <p className={`text-xl ${isDarkMode ? 'text-black' : 'text-white'}`}>
+            Say hello to <strong>DoubleA</strong>, my personal chatbot! Click the icon at the bottom right and start the conversation.
+            </p>
           </div>
         </div>
         <div className="flex-1 flex justify-center items-center ">
