@@ -74,9 +74,6 @@ export default function Experience() {
                 <p className="font-normal !mt-0 text-neutral-800">
                   {item.location}
                 </p>
-                <p className="!mt-1 !font-normal text-neutral-800 whitespace-pre-line">
-                  {item.description}
-                </p>
               </VerticalTimelineElement>
             ))}
           </VerticalTimeline>
