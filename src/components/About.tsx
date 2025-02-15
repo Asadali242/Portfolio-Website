@@ -2,7 +2,7 @@ import React, { useEffect, useState, useRef } from "react";
 import AboutImage from "../assets/images/image.jpeg";
 import { motion } from "framer-motion";
 import EncryptButton from "./Button";
-import Pdf from "../assets/Asad_Mehboob_Ali_Resume.pdf";
+import Pdf from "../assets/Asad-Ali_Resume.pdf";
 import { BsArrowRight } from "react-icons/bs";
 import Tile from "./Tile";
 
@@ -125,16 +125,20 @@ const About: React.FC = () => {
           >
             <h2 className="text-3xl font-bold dark:text-neutral-900 mb-4">About Me</h2>
             <p className="text-lg leading-relaxed pb-8 dark:text-neutral-900">
-              I am a Computer Science graduate with a deep passion for
-              harnessing the power of AI and machine learning to tackle global
-              challenges. Driven by a relentless quest for excellence, I am
-              constantly enhancing my programming and analytical skills to
-              innovate and create impactful solutions. My focus lies in applying
-              advanced technologies to address real-world problems, from
-              environmental sustainability to healthcare improvements. I am
-              seeking opportunities to collaborate on projects that strive for a
-              positive global impact. Let’s connect and make a difference
-              together.
+            I am a Computer Science graduate with a strong foundation in IT product management,
+            data-driven decision-making, and software engineering. With experience in healthcare IT, 
+            process automation, and cross-functional collaboration, I thrive on building innovative, 
+            user-centric products that drive efficiency and impact. 
+            
+            My expertise spans cloud computing (AWS, Azure), full-stack development 
+            (React, Node.js, Flask, Django), and data analytics (Power BI, SQL, Tableau), allowing me
+            to bridge the gap between technology, business strategy, and user needs. 
+            
+            I am passionate about solving complex challenges—whether optimizing medical billing systems,
+            automating workflows, or enhancing digital experiences. I am always looking for opportunities
+            to collaborate on scalable, high-impact solutions that push the boundaries of technology. 
+            
+            Let’s connect and create something meaningful together!
             </p>
             <EncryptButton text="Resume" url={Pdf} icon={<BsArrowRight />} />
           </motion.div>
