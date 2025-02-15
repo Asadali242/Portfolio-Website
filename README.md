@@ -2,14 +2,17 @@
 
 ## About Me
 
-I am a Computer Science graduate from Drexel University. Over the years, I have gained extensive experience in Full stack Software Engineering, data analytics and Machine Learning through various internships and projects. My portfolio website is a detailed representation of my resume, highlighting my skills and accomplishments.
+I am a Computer Science graduate from Drexel University with a strong background in IT Product Management, Full-Stack Development, Data Analytics, and Cloud Computing. Through various internships, co-ops, and projects, I have honed my expertise in building scalable, data-driven solutions and optimizing business workflows.
+
+This portfolio serves as an interactive extension of my resume, showcasing my technical skills, product management experience, and key accomplishments across different industries.
 
 
 ## Tech Stack used:
 
-- React: A JavaScript library for building user interfaces
-- TypeScript: A superset of JavaScript that adds static types
-- Vite: A build tool that provides a fast development server
-- Tailwind CSS: A utility-first CSS framework for styling
+- React.js – A JavaScript library for building interactive and efficient user interfaces.
+- TypeScript – A strongly typed superset of JavaScript for enhanced development reliability.
+- Vite – A fast and lightweight build tool for modern web applications.
+- Tailwind CSS – A utility-first CSS framework for rapid and responsive styling.
+- Node.js & Express.js – For backend API development and server-side functionality.
 
-### Chat Bot Integration very soon ...
+### Chat Bot, DoubleA, has been Integerated :)
