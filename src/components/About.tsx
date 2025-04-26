@@ -2,7 +2,7 @@ import React, { useEffect, useState, useRef } from "react";
 import AboutImage from "../assets/images/image.jpeg";
 import { motion } from "framer-motion";
 import EncryptButton from "./Button";
-import Pdf from "../assets/Asad-Ali_Resume.pdf";
+import Pdf from "../assets/Asad_M_Ali_Resume.pdf";
 import { BsArrowRight } from "react-icons/bs";
 import Tile from "./Tile";
 

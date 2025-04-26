@@ -8,7 +8,7 @@ import drexelImage from "../assets/images/image4.png";
 
 export const experiencesData = [
   {
-    title: "Associate Product Manager",
+    title: "Business Analyst (Product)",
     company: "Revenue Healthcare Services",
     location: "Chicago, IL",
     icon: React.createElement(CgWorkAlt),
@@ -16,7 +16,7 @@ export const experiencesData = [
     image: revenueImage,
   },
   {
-    title: "Software Product Management Co-op",
+    title: "Software Product Analyst Co-op",
     company: "Chubb Limited",
     location: "Philadelphia, PA",
     icon: React.createElement(CgWorkAlt),
@@ -24,7 +24,7 @@ export const experiencesData = [
     image: chubbImage,
   },
   {
-    title: "Technical Product Manager Co-op",
+    title: "Technical Product Management Co-op",
     company: "Day & Zimmermann",
     location: "Philadelphia, PA",
     icon: React.createElement(CgWorkAlt),
@@ -120,13 +120,12 @@ export const projectsData = [
 ] as const;
 
 export const skillsData = [
+"Business Analysis",
 "Java",  
 "Python",  
 "JavaScript",  
 "SQL",  
-"TypeScript",  
-"HTML",  
-"CSS",  
+"TypeScript", 
 "React.js",  
 "Next.js",  
 "Node.js",  
@@ -143,7 +142,8 @@ export const skillsData = [
 "Docker",  
 "Kubernetes",  
 "Linux",  
-"JIRA",  
+"JIRA",
+"Confluence",  
 "Notion",  
 "Trello",  
 "Apache",  
